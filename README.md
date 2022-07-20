@@ -1,22 +1,8 @@
-# create-svelte
+# CSU Apple Lab (iOS Club) Home Page
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
+Source code of our new home page.
 
 ## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -33,6 +19,29 @@ To create a production version of your app:
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+# Deploy
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+deploy to [https://csu-apple-lab.github.io/](https://csu-apple-lab.github.io/)
+```bash
+npm run deploy
+```
+# Trobles shooting
+
+1. hot-reload not working
+
+SvelteKit has supported hot-reload out of box, if it doesn't work, check these out:
+
+1. you are not running inside WSL (it causes some problems)
+2. the format of your `.svelte` is correct (like `<p/>` will causes hot-reload not working).
+
+# Todo
+
+1. - [ ] Main page
+2. - [ ] Members list
+3. - [ ] Recruit page
+
+# Team
+
+| name     | email                 |
+| ----     | ----                  |
+| Rick Lin | 8208200137@csu.edu.cn |

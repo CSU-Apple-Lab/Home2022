@@ -1,2 +1,3 @@
-<h1>Welcome to CSU iOS Club</h1>
-<p>powered by Svelte</p>
+<h1 class="text-3xl font-bold underline">
+	Hello, World
+</h1>
