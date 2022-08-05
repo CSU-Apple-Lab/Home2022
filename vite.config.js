@@ -1,5 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-
+import path from "path";
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -7,6 +7,11 @@ const config = {
 	server: {
 		watch: {
 			ignored: ['!**/node_modules/your-package-name/**']
+		}
+	},
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, './src')
 		}
 	}
 };

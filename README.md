@@ -25,11 +25,11 @@ deploy to [https://csu-apple-lab.github.io/](https://csu-apple-lab.github.io/)
 ```bash
 npm run deploy
 ```
-# Trobles shooting
+# Troubles shooting
 
 1. hot-reload not working
 
-SvelteKit has supported hot-reload out of box, if it doesn't work, check these out:
+SvelteKit has supported hot-reload out of the box, if it doesn't work, check these out:
 
 1. you are not running inside WSL (it causes some problems)
 2. the format of your `.svelte` is correct (like `<p/>` will causes hot-reload not working).
