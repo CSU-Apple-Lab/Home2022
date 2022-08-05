@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { browser } from "$app/env";
 	import Menu from "@/components/Menu/index.svelte";
-	import { XIcon } from "@rgossiaux/svelte-heroicons/solid";
+import Play from "@rgossiaux/svelte-heroicons/outline/Play";
+	import { XIcon, PlayIcon } from "@rgossiaux/svelte-heroicons/solid";
 
 	let clicked = false;
 	let scrollOutOfBillBoard = false;
@@ -24,7 +25,7 @@
 
 	function switchLogoPosition(e:Event) {
 		const billBoardHeight =  document.getElementById("bill_board")?.clientHeight || 0;
-		if ( scrollY >  billBoardHeight / 3 ) {
+		if ( scrollY >  (billBoardHeight * 2) / 3 ) {
 			scrollOutOfBillBoard = true;
 		}else {
 			scrollOutOfBillBoard = false;
@@ -32,11 +33,11 @@
 	}
 
 	function getLogoStyle(clicked:boolean,scrollOutOfBillBoard:boolean) {
-		return `${clicked? "hidden": ""} fixed top-0 w-full pt-1 pb-1 pl-3
+		return `${clicked? "hidden": ""} top-0 w-full pt-1 pb-1 pl-3
 				transition-all duration-300
 			 	flex ${scrollOutOfBillBoard? 
-					"bg-white items-center shadow-md gap-3" :
-					"justify-center items-center h-32 sm:h-80 gap-5 md:gap-16" } 
+					"fixed bg-white items-center shadow-md gap-3" :
+					"absolute flex-col sm:flex-row justify-center items-center h-screen sm:h-80 gap-5 md:gap-16" } 
 				`;
 	}
 
@@ -48,23 +49,28 @@
 </script>
 
 <div id="bill_board">
-	<div class={`block w-full ${clicked ? '' : 'h-32 sm:h-80 overflow-hidden'}`}>
+	<div class={`flex justify-center items-center sm:block w-full ${clicked ? '' : 'h-screen sm:h-80 overflow-hidden'}`}>
+		{#if clicked}
 		<video
 			class={`w-full max-h-screen bg-black ${clicked ? '' : 'opacity-40'}`}
-			muted={!clicked}
+			preload="none"
 			autoplay
-			loop
 			controls
 		>
 			<track kind="captions" />
 			<source src="think_different.mp4" type="video/mp4" />
 		</video>
+		{:else}
+			<div class="w-full h-full flex justify-center items-center bg-black opacity-40">
+				<img class="object-cover h-full sm:w-full" src="think_different_short.gif" alt="1997 apple think different ad."/>
+			</div>
+		{/if}
 	</div>
     <div class={getLogoStyle(clicked,scrollOutOfBillBoard)}>
         <img class={`
 			${scrollOutOfBillBoard? 
 				"w-9 h-9": 
-				"w-20 h-20 sm:w-48 sm:h-48"}
+				"w-48 h-48"}
 			`} 
 			src="iOS_Club_LOGO.png" alt="the logo of ios club."
 			/>
@@ -73,11 +79,10 @@
 				中南大学苹果实验室
 			</h1>
 		{:else}
-      		<h1 class="text-2xl sm:text-5xl text-white font-bold cursor-pointer"
-				on:click={clickBillBoard}
-			>
+      		<h1 class="text-4xl sm:text-5xl text-white font-bold">
 				Think different.
 			</h1>
+			<PlayIcon on:click={clickBillBoard} class="cursor-pointer absolute bottom-5 right-5 w-10 h-10 text-white"/>
 		{/if}
 		<div class={`invisible sm:visible fixed top-0 right-5 w-1/3 max-w-sm h-10 flex justify-end items-center gap-5
 			${scrollOutOfBillBoard?
@@ -94,7 +99,10 @@
 	{#if clicked}
 		<XIcon role="button" class="w-10 h-10 m-5 text-white cursor-pointer" on:click={clickBillBoard}/>	
 	{:else}
-		<Menu items={links}/>
+		<Menu items={links} buttonClass={
+			scrollOutOfBillBoard?
+			"text-gray-700":
+			"text-white"}/>
 	{/if}
 	</div>
 </div>
