@@ -1,5 +1,6 @@
 <script>
+    import { slide } from "svelte/transition"
     export let href = "/";
 </script>
 
-<a href={href} class="w-full flex justify-center items-center"><slot/></a>
+<a transition:slide href={href} class="w-full flex justify-center items-center"><slot/></a>

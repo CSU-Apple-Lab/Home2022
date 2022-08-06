@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { createEventDispatcher } from "svelte";
 	import { browser } from "$app/env";
 	import Menu from "@/components/Menu/index.svelte";
-import Play from "@rgossiaux/svelte-heroicons/outline/Play";
 	import { XIcon, PlayIcon } from "@rgossiaux/svelte-heroicons/solid";
+
+	const dispatch = createEventDispatcher();
 
 	let clicked = false;
 	let scrollOutOfBillBoard = false;
@@ -41,6 +43,23 @@ import Play from "@rgossiaux/svelte-heroicons/outline/Play";
 				`;
 	}
 
+	const loadResources = function*() {
+		yield 1;
+	}()
+
+	function tryTaggleLoadEvent() {
+		if ( loadResources.next().done ) {
+			dispatch('load');
+		}
+	}
+
+	const onload = (el:HTMLImageElement) => {
+		if( el.complete ) {
+			tryTaggleLoadEvent();
+		}
+		el.addEventListener('load',tryTaggleLoadEvent);
+	}
+
 	if( browser ) {
 		window.addEventListener('scroll', (e)=>{
 			window.requestAnimationFrame(()=>switchLogoPosition(e));
@@ -62,17 +81,25 @@ import Play from "@rgossiaux/svelte-heroicons/outline/Play";
 		</video>
 		{:else}
 			<div class="w-full h-full flex justify-center items-center bg-black opacity-40">
-				<img class="object-cover h-full sm:w-full" src="think_different_short.gif" alt="1997 apple think different ad."/>
+				<img id="bg_img" 
+					class="object-cover h-full sm:w-full"  
+					alt="1997 apple think different ad."
+					src="think_different_short.gif"
+					use:onload
+				/>
 			</div>
 		{/if}
 	</div>
     <div class={getLogoStyle(clicked,scrollOutOfBillBoard)}>
-        <img class={`
+        <img id="logo" 
+			class={`
 			${scrollOutOfBillBoard? 
 				"w-9 h-9": 
 				"w-48 h-48"}
 			`} 
-			src="iOS_Club_LOGO.png" alt="the logo of ios club."
+			alt="the logo of ios club."
+			src="iOS_Club_LOGO.png"
+			use:onload
 			/>
 		{#if scrollOutOfBillBoard}
         	<h1 class="text-xl">
@@ -82,7 +109,7 @@ import Play from "@rgossiaux/svelte-heroicons/outline/Play";
       		<h1 class="text-4xl sm:text-5xl text-white font-bold">
 				Think different.
 			</h1>
-			<PlayIcon on:click={clickBillBoard} class="cursor-pointer absolute bottom-5 right-5 w-10 h-10 text-white"/>
+			<PlayIcon on:click={clickBillBoard} class="cursor-pointer sm:absolute sm:bottom-5 sm:right-5 w-10 h-10 text-white"/>
 		{/if}
 		<div class={`invisible sm:visible fixed top-0 right-5 w-1/3 max-w-sm h-10 flex justify-end items-center gap-5
 			${scrollOutOfBillBoard?

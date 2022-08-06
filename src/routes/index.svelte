@@ -1,8 +1,15 @@
-<script>
+<script lang="ts">
     import BillBoard from "@/components/BillBoard.svelte";
-</script>
+    import Loading from "@/components/Loading.svelte";
 
-<BillBoard/>
+    let billBoardLoaded = false;
+
+    function loadingComplete() {
+        billBoardLoaded = true;
+    }
+</script>
+    <BillBoard on:load={loadingComplete}/>
+    <Loading bind:endLoading={billBoardLoaded}/>
 <div>
 
 The standard Lorem Ipsum passage, used since the 1500s
