@@ -1,7 +1,7 @@
 <script lang="ts">
 import { fade } from "svelte/transition";
 import { slide } from "svelte/transition";
-export let endLoading = false;
+export let hidden = false;
 const contents = [
     "Comunicate()",
     "Share()",
@@ -10,7 +10,6 @@ const contents = [
     "Listen()"
 ];
 let displayContents:string[] = [];
-let hidden = false;
 let id: any;
 function animation(el:HTMLElement) {
     let count = 0;
@@ -20,8 +19,6 @@ function animation(el:HTMLElement) {
             displayContents.push(last);
             displayContents = displayContents;
             count++;
-        }else if(endLoading){
-            hidden = true;
         }else{
            displayContents = [];
            count = 0;

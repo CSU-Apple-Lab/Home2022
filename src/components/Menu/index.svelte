@@ -1,6 +1,5 @@
 <script lang="ts">
   import {
-    blur,
     fade
   } from "svelte/transition";
   import {
@@ -14,11 +13,11 @@
   } from "@rgossiaux/svelte-heroicons/outline";
   import Item from "./Item.svelte";
   export let items: { href: string, tag: string }[] = [];
-  export let buttonClass = "";
+  export let headerClass = "";
 </script>
 
 <Popover class="sm:hidden" let:open>
-  <PopoverButton class={buttonClass} style="outline:none">
+  <PopoverButton class={headerClass} style="outline:none">
     {#if open}
       <XIcon class="w-10 h-10"/>
     {:else}
@@ -35,4 +34,10 @@
     </div>
   </PopoverPanel>
 </Popover>
+
+<div class={`invisible sm:visible fixed top-0 w-screen h-10 flex justify-end items-center gap-5 pr-5 font-bold ${headerClass}`}>
+  {#each items as item}
+    <a href={item.href}>{item.tag}</a>
+  {/each}
+</div>
 
