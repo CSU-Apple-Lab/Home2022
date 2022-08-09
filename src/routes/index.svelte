@@ -1,5 +1,11 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import BillBoard from "@/components/BillBoard.svelte";
+    import { showLoading } from "@/global/loading";
+
+    onMount(()=>{
+        showLoading.set(false);
+    })
 </script>
     <BillBoard/>
 <div>

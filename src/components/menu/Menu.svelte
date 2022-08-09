@@ -11,7 +11,7 @@
 	  MenuAlt4Icon,
     XIcon
   } from "@rgossiaux/svelte-heroicons/outline";
-  import Item from "./Item.svelte";
+  import Item from "@/components/menu/Item.svelte";
   export let items: { href: string, tag: string }[] = [];
   export let headerClass = "";
 </script>

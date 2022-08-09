@@ -8,9 +8,6 @@ const config = {
 		watch: {
 			ignored: ['!**/node_modules/your-package-name/**']
 		},
-		hmr: {
-			port: 4173
-		},
 		port: 5173
 	},
 	resolve: {
