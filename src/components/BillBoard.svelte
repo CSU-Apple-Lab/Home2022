@@ -69,7 +69,7 @@
 		el.addEventListener('playing',()=>isWaiting = false);
 	}
 
-	let src = 'think_different_short.gif';
+	let src = 'component/billboard/think_different_short.gif';
 	function preloadImg(src:string) {
 		return new Promise((r)=>{
 			let img = new Image();
@@ -101,7 +101,7 @@
 					muted={isMuted}
 				>
 					<track kind="captions"/>
-					<source src="think_different.mp4" type="video/mp4"/>
+					<source src="component/billboard/think_different.mp4" type="video/mp4"/>
 				</video>
 				{#if isWaiting}
 					<Loading spinnerStyle={"stroke:rgb(255,255,255)"}/>
@@ -118,7 +118,7 @@
 				{#await preloadImg(src)}
 					<img
 						in:fly 
-						src="think_different_alt.png"
+						src="component/billboard/think_different_alt.png"
 						class="object-cover h-full sm:w-full"  
 						alt="1997 apple think different ad."
 					/>

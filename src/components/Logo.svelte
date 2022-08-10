@@ -34,7 +34,7 @@
 				"w-48 h-48"}
 			`} 
 			alt="the logo of ios club."
-			src="iOS_Club_LOGO.png"
+			src="component/logo/iOS_Club_LOGO.png"
 			use:onload
 			/>
 		{#if asHeader}
