@@ -16,7 +16,7 @@
   export let headerClass = "";
 </script>
 
-<Popover class="sm:hidden" let:open>
+<Popover class="sm:hidden" let:open let:close>
   <PopoverButton class={headerClass} style="outline:none">
     {#if open}
       <XIcon class="w-10 h-10"/>
@@ -24,10 +24,10 @@
       <MenuAlt4Icon class="w-10 h-10"/>
     {/if}
     </PopoverButton>
-  <PopoverPanel>
+  <PopoverPanel on:click={()=>close(null)}>
     <div
       transition:fade
-      class="fixed w-full h-full top-10 right-0 bg-white p-5 flex flex-col gap-5">
+      class="fixed w-full h-full top-14 right-0 bg-white p-5 flex flex-col gap-5">
       {#each items as item}
         <Item href={item.href}>{item.tag}</Item> 
       {/each}
@@ -35,7 +35,7 @@
   </PopoverPanel>
 </Popover>
 
-<div class={`invisible sm:visible fixed top-0 w-screen h-10 flex justify-end items-center gap-5 pr-5 font-bold ${headerClass}`}>
+<div class={`invisible sm:visible fixed top-0 w-screen h-14 flex justify-end items-center gap-5 pr-5 font-bold ${headerClass}`}>
   {#each items as item}
     <a href={item.href}>{item.tag}</a>
   {/each}

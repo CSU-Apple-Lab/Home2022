@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fly, fade } from 'svelte/transition';
-	import BillBoard from '@/components/BillBoard.svelte';
+	import { fade } from 'svelte/transition';
 	import { showLoading } from '@/global/loading';
 	import Card from '@/components/card/Card.svelte';
 	import CardTitleBlock from '@/components/card/CardTitleBlock.svelte';
@@ -13,16 +12,15 @@
 	});
 </script>
 
-<BillBoard />
 <List>
-	<Card class="p-10 flex flex-col md:flex-row md:justify-start  items-center">
+	<Card class="p-10 flex flex-col md:flex-row md:justify-between  items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_conversation_re_c26v.svg" alt="doing conversation" class="w-32 h-32" />
 			</div>
 			<div class="p-5">
 				<h1 class="font-bold text-5xl">Think different</h1>
-				<h1 class="text-3xl">是我们的宗旨与slogan。</h1>
+				<h1 class="text-3xl">是我们的宗旨与slogan</h1>
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>
@@ -32,7 +30,7 @@
 			<p>在这里，你能遇见心有鸿鹄的人、遇见新鲜独到的见解与观点、收获珍贵且坚韧的友谊与羁绊。</p>
 		</CardContextBlock>
 	</Card>
-	<Card class="p-10 flex flex-col md:flex-row-reverse md:justify-start items-center">
+	<Card class="p-10 flex flex-col md:flex-row-reverse md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_happy_feeling_re_e76r.svg" alt="doing conversation" class="w-32 h-32" />
@@ -48,7 +46,7 @@
 			<p>欢迎到我们的<a class="font-bold" href="/">博客</a>了解我们的最新成果，以及关注我们成员的<a class="font-bold" href="/">个人博客</a></p>
 		</CardContextBlock>
 	</Card>
-	<Card class="p-10 flex flex-col md:flex-row md:justify-start items-center">
+	<Card class="p-10 flex flex-col md:flex-row md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_winners_re_wr1l.svg" alt="doing conversation" class="w-32 h-32" />
@@ -59,7 +57,7 @@
 			<p>苹果实验室欢迎各种形式的合作， 详情请咨询目前的学生负责人或指导老师，请见<a class="font-bold" href="/">关于我们</a>。</p>
 		</CardContextBlock>
 	</Card>
-	<Card class="p-10 flex flex-col md:flex-row-reverse md:justify-start items-center">
+	<Card class="p-10 flex flex-col md:flex-row-reverse md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_agree_re_hor9.svg" alt="doing conversation" class="w-32 h-32" />
@@ -67,7 +65,7 @@
 			<h1 class="p-5 font-bold text-4xl">加入我们</h1>
 		</CardTitleBlock>
 		<CardContextBlock>
-			<p>在每年8月底至9月初，我们会透过本站及各个渠道进行宣传招新。期待你的<a class="font-bold" href="/">加入</a></p>
+			<p>在每年8月底至9月初，我们会透过本站及各个渠道进行宣传招新。期待你的<a class="font-bold" href="/test">加入</a></p>
 		</CardContextBlock>
 	</Card>
 </List>
