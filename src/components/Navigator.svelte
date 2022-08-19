@@ -11,7 +11,7 @@
 
 	const links = [
 		{ href:"/", tag:"首页"},
-		{ href:"/", tag:"关于我们"},
+		{ href:"/contactUs", tag:"联系我们"},
 		{ href:"/joinUs", tag:"加入我们"}
 	]
 
@@ -25,7 +25,7 @@
 	}
 </script>
 {#if show}
-<div transition:fade class={`top-0 w-full pt-1 pb-1 pl-3
+<div transition:fade class={`z-50 top-0 w-full pt-1 pb-1 pl-3
 				transition-all duration-300
 			 	flex fixed h-14 bg-white items-center shadow-md gap-5`}>
 	<img
@@ -41,7 +41,7 @@
 	/>
 </div>
 
-<div class="w-full h-14 fixed top-0 flex justify-end items-center">
+<div class="z-50 w-full h-14 fixed top-0 flex justify-end items-center">
 	<Menu items={links} 
 		headerClass={"text-gray-700"}
 	/>

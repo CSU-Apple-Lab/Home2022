@@ -30,4 +30,12 @@ export const play = compose(playMap, useSelectHTMLElementById<HTMLMediaElement>(
 export const pause = compose(pauseMap, useSelectHTMLElementById<HTMLMediaElement>());
 export const rewind = compose(rewindMap, useSelectHTMLElementById<HTMLMediaElement>());
 
-export const addEventListenerById = pipe(useSelectHTMLElementById<HTMLMediaElement>(), useAddMediaEventListener()); 
+export const addEventListenerById = pipe(useSelectHTMLElementById<HTMLMediaElement>(), useAddMediaEventListener());
+
+export function preloadImg(src: string) {
+		return new Promise((r) => {
+			let img = new Image();
+			img.onload = r;
+			img.src = src;
+		});
+	}

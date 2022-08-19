@@ -14,6 +14,7 @@
 	import { onMount } from 'svelte';
 	import _ from 'lodash';
 	import Menu from '../menu/Menu.svelte';
+	import { preloadImg } from '@/utils/dom.helper';
 
 
 	let page: Page;
@@ -26,7 +27,7 @@
 
 	const links = [
 		{ href:"/", tag:"首页"},
-		{ href:"/", tag:"关于我们"},
+		{ href:"/contactUs", tag:"联系我们"},
 		{ href:"/joinUs", tag:"加入我们"}
 	]
 
@@ -42,7 +43,7 @@
 			const t = eventQueue.pop();
 			const p = temp;
 			temp = statusChange(temp, t);
-			console.log(p, temp, t);
+			//console.log(p, temp, t);
 		}
 		status = temp;
 		currentStatus.set(status);
@@ -110,13 +111,6 @@
 	}
 
 	let src = 'component/Banner/think_different_short.gif';
-	function preloadImg(src: string) {
-		return new Promise((r) => {
-			let img = new Image();
-			img.onload = r;
-			img.src = src;
-		});
-	}
 
 	onMount(() => {
 		window.addEventListener('scroll', () => {
