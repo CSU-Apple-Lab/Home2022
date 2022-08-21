@@ -41,7 +41,7 @@
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>
-			<p>苹果实验室有许多与企业合作，为中南大学尤其是计算机学院的同学提供有意思的活动沙龙</p>
+			<p>苹果实验室有许多与企业合作，为中南大学尤其是计算机学院的同学提供有意思的活动沙龙。</p>
 			<p>我们联络优秀的业界前辈举行techtalk，为同学们答疑解惑、指点迷津；成员们也在各项活动与学术学习中大放异彩。</p>
 			<p>欢迎到我们的<a class="font-bold" href="https://blog.csdn.net/cyl_csdn_1">博客</a>了解我们的最新成果。</p>
 		</CardContextBlock>
@@ -66,7 +66,7 @@
 		</CardTitleBlock>
 		<CardContextBlock>
 			<p>苹果实验室坚持小而精的发展路线，每届只固定招收 8-9 人，招生对象面向全校。我们没有硬性的招生标准，只希望能够和有着不同想法的你相遇。</p>
-			<p>在每年8月底至9月初，我们会透过本站及各个渠道进行宣传招新。期待你的<a class="font-bold" href="/joinUs">加入</a></p>
+			<p>在每年8月底至9月初，我们会透过本站及各个渠道进行宣传招新。期待你的<a class="font-bold" href="/joinUs">加入。</a></p>
 		</CardContextBlock>
 	</Card>
 </List>

@@ -94,13 +94,13 @@
 	{/if}
 	<div
 		class="{showGoBack ? '' : 'invisible'} 
-		fixed bottom-20 right-5 w-20 h-20  
+		fixed bottom-20 right-5 w-14 h-14  
 		cursor-pointer flex flex-col justify-center items-center gap-2 
 		bg-slate-100 shadow-lg md:bg-transparent rounded-full
 		"
 		on:click={scrollToTop}
 		transition:fade
 	>
-		<ChevronDoubleUpIcon class="w-10 h-10" />
+		<ChevronDoubleUpIcon class="w-5 h-5" />
 	</div>
 </div>

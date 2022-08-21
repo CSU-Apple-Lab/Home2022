@@ -19,7 +19,7 @@ import List from "@/components/card/List.svelte";
 		</CardTitleBlock>
 		<CardContextBlock>
 			<p>选择适合你的面试官，让我们在面试时更好地与你交流。</p>
-            <p class="font-bold">请复制面试官代号并于填写申请表时填入，或留空由我们为你安排</p>
+            <p class="font-bold">请复制面试官代号并于填写申请表时填入，或留空由我们为你安排。</p>
 		</CardContextBlock>
 	</Card>
 	<Card class="flex flex-col md:flex-row md:justify-between items-center">
@@ -47,7 +47,7 @@ import List from "@/components/card/List.svelte";
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>
-			<p>我们会尽快安排面试，你可以加入招新群随时了解最新信息</p>
+			<p>我们会尽快安排面试，你可以加入招新群随时了解最新信息。</p>
 		</CardContextBlock>
     </Card>
 </List>
