@@ -16,7 +16,6 @@
 	import Menu from '../menu/Menu.svelte';
 	import { preloadImg } from '@/utils/dom.helper';
 
-
 	let page: Page;
 	let status: BannerStatus = statusChange(null, null);
 	let eventQueue: Array<BannerEvent | null> = new Array<BannerEvent | null>();
@@ -75,6 +74,7 @@
 			currentEvent.set({ type: 'C', control: { min: true } });
 		} else {
 			currentEvent.set({ type: 'C', control: { max: true } });
+			window.scrollTo({ top: 0 });
 		}
 	}
 
@@ -198,6 +198,7 @@
 					control: { close: true },
 					page: { from: page.url.pathname }
 				});
+				showLoading.set(false);
 			}}
 			on:play={play}
 			on:pause={pause}

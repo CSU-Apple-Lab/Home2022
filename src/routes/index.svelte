@@ -13,12 +13,12 @@
 </script>
 
 <List>
-	<Card class="p-10 flex flex-col md:flex-row md:justify-between  items-center">
+	<Card class="flex flex-col md:flex-row md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_conversation_re_c26v.svg" alt="doing conversation" class="w-32 h-32" />
 			</div>
-			<div class="p-5">
+			<div class="p-5 flex flex-col justify-center items-start">
 				<h1 class="font-bold text-5xl">Think different</h1>
 				<h1 class="text-3xl">是我们的宗旨与slogan</h1>
 			</div>
@@ -30,7 +30,7 @@
 			<p>在这里，你能遇见心有鸿鹄的人、遇见新鲜独到的见解与观点、收获珍贵且坚韧的友谊与羁绊。</p>
 		</CardContextBlock>
 	</Card>
-	<Card class="p-10 flex flex-col md:flex-row-reverse md:justify-between items-center">
+	<Card class="flex flex-col md:flex-row-reverse md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_happy_feeling_re_e76r.svg" alt="doing conversation" class="w-32 h-32" />
@@ -43,26 +43,26 @@
 		<CardContextBlock>
 			<p>苹果实验室有许多与企业合作，为中南大学尤其是计算机学院的同学提供有意思的活动沙龙</p>
 			<p>我们联络优秀的业界前辈举行techtalk，为同学们答疑解惑、指点迷津；成员们也在各项活动与学术学习中大放异彩。</p>
-			<p>欢迎到我们的<a class="font-bold" href="https://blog.csdn.net/cyl_csdn_1">博客</a>了解我们的最新成果，以及关注我们成员的<a class="font-bold" href="/">个人博客</a></p>
+			<p>欢迎到我们的<a class="font-bold" href="https://blog.csdn.net/cyl_csdn_1">博客</a>了解我们的最新成果。</p>
 		</CardContextBlock>
 	</Card>
-	<Card class="p-10 flex flex-col md:flex-row md:justify-between items-center">
+	<Card class="flex flex-col md:flex-row md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_winners_re_wr1l.svg" alt="doing conversation" class="w-32 h-32" />
 			</div>
-			<h1 class="p-5 font-bold text-4xl">与我们合作</h1>
+			<h1 class="p-5 font-bold text-4xl truncate">与我们合作</h1>
 		</CardTitleBlock>
 		<CardContextBlock>
 			<p>中南大学苹果实验室欢迎各种形式的合作，详情请咨询目前的学生负责人，请见<a class="font-bold" href="/contactUs">联系我们</a>。</p>
 		</CardContextBlock>
 	</Card>
-	<Card class="p-10 flex flex-col md:flex-row-reverse md:justify-between items-center">
+	<Card class="flex flex-col md:flex-row-reverse md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
 				<img src="index/undraw_agree_re_hor9.svg" alt="doing conversation" class="w-32 h-32" />
 			</div>
-			<h1 class="p-5 font-bold text-4xl">加入我们</h1>
+			<h1 class="p-5 font-bold text-4xl truncate">加入我们</h1>
 		</CardTitleBlock>
 		<CardContextBlock>
 			<p>苹果实验室坚持小而精的发展路线，每届只固定招收 8-9 人，招生对象面向全校。我们没有硬性的招生标准，只希望能够和有着不同想法的你相遇。</p>

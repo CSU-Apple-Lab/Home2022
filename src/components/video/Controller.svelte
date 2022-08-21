@@ -73,7 +73,7 @@
     }
 </script>
 
-<div use:whileHover transition:fly class={`fixed bottom-0 ${rolled? "w-52":"w-full lg:w-1/2"} transition-all duration-300`}>
+<div use:whileHover transition:fly class={`z-50 fixed bottom-0 ${rolled? "w-52":"w-full lg:w-1/2"} transition-all duration-300`}>
 		<div class="w-full h-10 rounded-tr-2xl bottom-0 flex justify-between items-center bg-black shadow-black shadow-lg">
 		<div class="flex justify-start items-center">
 		{#if isPaused}

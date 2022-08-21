@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
-	import Menu from './menu/Menu.svelte';
+	import Menu from '../menu/Menu.svelte';
 	import { showNavigator } from "@/global/navigator";
 
 	let show = false;
@@ -32,7 +32,7 @@
 		id="logo"
 		class={`w-11 h-11`}
 		alt="the logo of ios club."
-		src="component/logo/iOS_Club_LOGO.png"
+		src="/global/iOS_Club_LOGO.png"
 		use:onload
 	/>
 	<h1 class="text-xl">中南大学苹果实验室</h1>

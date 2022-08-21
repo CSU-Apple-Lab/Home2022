@@ -3,7 +3,7 @@
 	import { PlayIcon } from '@rgossiaux/svelte-heroicons/solid';
 	import { preloadImg } from '@/utils/dom.helper';
 
-	const imgSrc = "/component/logo/iOS_Club_LOGO.png"; 
+	const imgSrc = "/global/iOS_Club_LOGO.png"; 
 </script>
 
 <div transition:fade class={`top-0 w-full pt-1 pb-1 pl-3
