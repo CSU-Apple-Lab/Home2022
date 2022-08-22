@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Tab from './Tab.svelte';
 	import { createEventDispatcher } from 'svelte';
-import _ from 'lodash';
+	import _ from 'lodash';
 	export let sections: { tag: string; current?: boolean; done: boolean }[] = [];
 	const dispatcher = createEventDispatcher();
 </script>
@@ -15,7 +15,7 @@ import _ from 'lodash';
 					: ''} {_.current ? 'text-xl bg-slate-100' : ''}"
 				on:click={() => dispatcher('click', i)}
 			>
-				<p class="{_.current? "":"hidden sm:block"}">{_.tag}</p>
+				<p class={_.current ? '' : 'hidden sm:block'}>{_.tag}</p>
 				{#if !_.current}
 					<p class="sm:hidden">{i}</p>
 				{/if}

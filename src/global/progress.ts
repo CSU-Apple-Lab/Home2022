@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
 export const showProgressBar = writable(false);
 
@@ -7,4 +7,4 @@ export const showProgressBar = writable(false);
  */
 export const progressBarProgress = writable(0);
 
-export const progressBarClass = writable("bg-blue-600");
+export const progressBarClass = writable('bg-blue-600');

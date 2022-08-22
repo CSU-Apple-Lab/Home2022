@@ -1,15 +1,13 @@
 <script lang="ts">
-import { is } from "ramda";
+	import { is } from 'ramda';
 
-
-    export let label = "";
-    export let options:string[] = [];
-    export let isValid = true;
-    export let required = false;
-    export let notice = "";
-    let clazz = "";
-    export { clazz as class };
-
+	export let label = '';
+	export let options: string[] = [];
+	export let isValid = true;
+	export let required = false;
+	export let notice = '';
+	let clazz = '';
+	export { clazz as class };
 </script>
 
 <div class="w-full px-3 mb-6 {clazz}">
@@ -18,19 +16,21 @@ import { is } from "ramda";
 		for="grid-first-name"
 	>
 		<p>{label}</p>
-        {#if required}
-            <p class="text-red-500">*</p>
-        {/if}
+		{#if required}
+			<p class="text-red-500">*</p>
+		{/if}
 	</label>
 	<div class="relative">
 		<select
-			class="block appearance-none w-full bg-gray-200 border {isValid? "border-gray-200":"border-red-500"} text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+			class="block appearance-none w-full bg-gray-200 border {isValid
+				? 'border-gray-200'
+				: 'border-red-500'} text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 			id="grid-state"
-            on:input
+			on:input
 		>
-        {#each options as option}
-            <option>{option}</option>
-        {/each}
+			{#each options as option}
+				<option>{option}</option>
+			{/each}
 		</select>
 		<div
 			class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
@@ -42,7 +42,7 @@ import { is } from "ramda";
 			>
 		</div>
 	</div>
-    {#if !isValid}
-	    <p class="text-red-500 text-xs italic">{notice}</p>
-    {/if}
+	{#if !isValid}
+		<p class="text-red-500 text-xs italic">{notice}</p>
+	{/if}
 </div>

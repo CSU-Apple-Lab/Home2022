@@ -10,7 +10,13 @@
 	import { loadingProgress, showLoading } from '@/global/loading';
 	import Loading from '@/components/Loading.svelte';
 	import { progressBarProgress, showProgressBar } from '@/global/progress';
-	import { currentEvent, currentStatus, statusChange, type BannerEvent, BannerStatus } from '@/global/banner';
+	import {
+		currentEvent,
+		currentStatus,
+		statusChange,
+		type BannerEvent,
+		BannerStatus
+	} from '@/global/banner';
 	import { onMount } from 'svelte';
 	import _ from 'lodash';
 	import Menu from '../menu/Menu.svelte';
@@ -25,10 +31,10 @@
 	let display = false;
 
 	const links = [
-		{ href:"/", tag:"首页"},
-		{ href:"/contactUs", tag:"联系我们"},
-		{ href:"/joinUs", tag:"加入我们"}
-	]
+		{ href: '/', tag: '首页' },
+		{ href: '/contactUs', tag: '联系我们' },
+		{ href: '/joinUs', tag: '加入我们' }
+	];
 
 	_page.subscribe((val) => {
 		currentEvent.set({ type: 'P', page: { to: val.url.pathname } });
@@ -185,9 +191,7 @@
 	{/if}
 
 	<div class="w-full h-14 fixed top-0 flex justify-end items-center">
-		<Menu items={links} 
-			headerClass={"text-white"}
-		/>
+		<Menu items={links} headerClass={'text-white'} />
 	</div>
 
 	{#if displayVideo}

@@ -21,7 +21,7 @@
 
 	type section = { tag: string; current: boolean; done: boolean };
 
-	let sections:section[] = [];
+	let sections: section[] = [];
 
 	function tabOnClick(e: CustomEvent<number>) {
 		sections = sections.map((tab, idx) => {
@@ -69,13 +69,15 @@
 					done: false
 				}
 			]),
-			(res)=>{sections = res}
+			(res) => {
+				sections = res;
+			}
 		);
 	});
 
-	afterUpdate(()=>{
-		local.storeWithKey('apply21',sections);
-	})
+	afterUpdate(() => {
+		local.storeWithKey('apply21', sections);
+	});
 </script>
 
 <div class="pt-20 mb-52 w-full flex flex-col justify-between items-center">

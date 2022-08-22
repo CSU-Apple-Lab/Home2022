@@ -13,7 +13,7 @@
 <List class="p-10 flex flex-col justify-center items-center">
 	<Card class="md:hidden p-10 flex flex-col lg:flex-row lg:justify-start items-center">
 		<CardTitleBlock>
-			<img class="w-52 h-52" src="joinUs/undraw_interview_re_e5jn.svg" alt="interview" />
+			<img class="w-52 h-52" src="joinUs/undraw_interview_re_e5jn.svg" alt="Join us" />
 		</CardTitleBlock>
 		<CardContextBlock>
 			<h1 class="text-5xl font-bold truncate">加入我们</h1>
@@ -24,7 +24,7 @@
 		<img
 			class="z-0 absolute top-0 right-0 w-96 h-96"
 			src="joinUs/undraw_interview_re_e5jn.svg"
-			alt="interview"
+			alt="Join us"
 		/>
 		<div class="flex flex-col justify-center items-start gap-5">
 			<h1 class="z-10 text-5xl font-bold">加入我们</h1>
@@ -32,8 +32,10 @@
 		</div>
 	</div>
 	<List class="flex flex-col justify-center items-center">
-		<Card class="flex flex-col justify-start items-center border-2 border-slate-100 rounded-xl" >
-			<div class="relative w-full sm:p-10 flex flex-col max-w-7xl lg:flex-row lg:justify-between items-center bg-slate-100 rounded-t-xl opacity-95 overflow-hidden">
+		<Card class="flex flex-col justify-start items-center border-2 border-slate-100 rounded-xl">
+			<div
+				class="relative w-full sm:p-10 flex flex-col max-w-7xl lg:flex-row lg:justify-between items-center bg-slate-100 rounded-t-xl opacity-95 overflow-hidden"
+			>
 				<CardTitleBlock>
 					<div class="flex flex-col lg:flex-row justify-center items-center gap-5">
 						<h1 class="text-3xl truncate">iOSClub 21届招新</h1>
@@ -47,7 +49,7 @@
 				<img
 					class="z-0 absolute -bottom-10 right-5 lg:right-1/3 w-32 h-32"
 					src="joinUs/undraw_join_re_w1lh.svg"
-					alt="join us."
+					alt="Join us."
 				/>
 			</div>
 			<CardContextBlock>

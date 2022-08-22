@@ -3,25 +3,23 @@
 	import { PlayIcon } from '@rgossiaux/svelte-heroicons/solid';
 	import { preloadImg } from '@/utils/dom.helper';
 
-	const imgSrc = "/global/iOS_Club_LOGO.png"; 
+	const imgSrc = '/global/iOS_Club_LOGO.png';
 </script>
 
-<div transition:fade class={`top-0 w-full pt-1 pb-1 pl-3
+<div
+	transition:fade
+	class={`top-0 w-full pt-1 pb-1 pl-3
 				transition-all duration-300
-			 	flex absolute flex-col sm:flex-row justify-center items-center h-screen sm:h-80 gap-5 md:gap-16`}>
+			 	flex absolute flex-col sm:flex-row justify-center items-center h-screen sm:h-80 gap-5 md:gap-16`}
+>
 	{#await preloadImg(imgSrc) then _}
-	<img
-		src={imgSrc}
-		id="logo"
-		class={`w-48 h-48`}
-		alt="the logo of ios club."
-	/>
+		<img src={imgSrc} id="logo" class={`w-48 h-48`} alt="the logo of ios club." />
 	{/await}
 	<h1 class="text-4xl sm:text-5xl text-white font-bold">Think different.</h1>
-	<PlayIcon
+	<!-- <PlayIcon
 			on:click
 			class="cursor-pointer sm:absolute sm:bottom-5 sm:right-5 w-10 h-10 hover:w-14 hover:h-14 transition-all duration-300 text-white"
-	/>
+	/> -->
 </div>
 <!-- blank to prevent content being hidden by navigator-->
 <div class="h-14" />

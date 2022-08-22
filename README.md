@@ -22,9 +22,11 @@ npm run build
 # Deploy
 
 deploy to [https://csu-apple-lab.github.io/](https://csu-apple-lab.github.io/)
+
 ```bash
 npm run deploy
 ```
+
 # Troubles shooting
 
 1. hot-reload not working
@@ -43,5 +45,5 @@ SvelteKit has supported hot-reload out of the box, if it doesn't work, check the
 # Team
 
 | name     | email                 |
-| ----     | ----                  |
+| -------- | --------------------- |
 | Rick Lin | 8208200137@csu.edu.cn |
