@@ -24,7 +24,7 @@
 			</div>
 			<div class="p-5 flex flex-col justify-center items-start">
 				<h1 class="font-bold text-5xl">Think different</h1>
-				<h1 class="text-3xl">是我们的宗旨与slogan</h1>
+				<h1 class="text-3xl truncate">是我们的宗旨与slogan</h1>
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>
@@ -53,7 +53,7 @@
 			</div>
 			<div class="p-5">
 				<h1 class="text-4xl">在iOSClub，</h1>
-				<h1 class="font-bold text-5xl">做你想做的</h1>
+				<h1 class="font-bold text-5xl truncate">做你想做的</h1>
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>

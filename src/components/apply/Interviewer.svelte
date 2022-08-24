@@ -10,7 +10,7 @@
 
 <div
 	transition:fly
-	class="bg-slate-50 w-72 rounded-lg flex flex-col justify-center items-center hover:shadow-lg transition-shadow duration-300"
+	class="bg-slate-50 w-72 p-5 flex-grow-0 flex-shrink-0 rounded-lg flex flex-col justify-center items-center hover:shadow-lg transition-shadow duration-300"
 >
 	<CardTitleBlock>
 		<img class="w-32 h-32 rounded-full" src={avatar} alt="avatar" />

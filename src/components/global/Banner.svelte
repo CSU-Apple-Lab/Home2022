@@ -190,10 +190,6 @@
 		<Logo on:click={clickPlay} />
 	{/if}
 
-	<div class="w-full h-14 fixed top-0 flex justify-end items-center">
-		<Menu items={links} headerClass={'text-white'} />
-	</div>
-
 	{#if displayVideo}
 		<Controller
 			on:close={() => {

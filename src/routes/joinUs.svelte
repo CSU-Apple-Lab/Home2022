@@ -32,9 +32,9 @@
 		</div>
 	</div>
 	<List class="flex flex-col justify-center items-center">
-		<Card class="flex flex-col justify-start items-center border-2 border-slate-100 rounded-xl">
+		<Card class="flex flex-col justify-start items-center backdrop-blur-lg shadow-md rounded-xl">
 			<div
-				class="relative w-full sm:p-10 flex flex-col max-w-7xl lg:flex-row lg:justify-between items-center bg-slate-100 rounded-t-xl opacity-95 overflow-hidden"
+				class="relative w-full sm:p-10 flex flex-col max-w-7xl lg:flex-row lg:justify-between items-center rounded-t-xl overflow-hidden"
 			>
 				<CardTitleBlock>
 					<div class="flex flex-col lg:flex-row justify-center items-center gap-5">
