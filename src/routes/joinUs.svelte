@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<List class="flex flex-col justify-center items-center">
-		<Card class="flex flex-col justify-start items-center backdrop-blur-lg shadow-md rounded-xl">
+		<Card class="flex flex-col justify-start items-center my-backdrop-blur shadow-md rounded-xl">
 			<div
 				class="relative w-full sm:p-10 flex flex-col max-w-7xl lg:flex-row lg:justify-between items-center rounded-t-xl overflow-hidden"
 			>

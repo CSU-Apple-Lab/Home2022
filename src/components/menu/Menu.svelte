@@ -18,7 +18,7 @@
 	<PopoverPanel on:click={() => close(null)}>
 		<div
 			transition:fade
-			class="fixed w-full h-screen top-14 right-0 backdrop-blur-lg p-5 flex flex-col gap-5"
+			class="z-50 fixed w-screen h-screen top-14 right-0 my-backdrop-blur p-5 flex flex-col gap-5"
 		>
 			{#each items as item}
 				<Item href={item.href}>{item.tag}</Item>

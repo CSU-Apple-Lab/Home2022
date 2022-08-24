@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .my-backdrop-blur {
+		backdrop-filter: blur(10px);
+	}
+}

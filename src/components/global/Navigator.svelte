@@ -27,16 +27,17 @@
 
 <div
 	transition:fade
-	class={`z-50 top-0 w-full pt-1 pb-1 pl-3
+	class={`z-40 top-0 w-full pt-1 pb-1 pl-3
 				transition-all duration-300
-			 	flex fixed h-14 backdrop-blur items-center ${show? 'shadow-md' : '' } gap-5`}
->
+			 	flex fixed h-14 my-backdrop-blur items-center ${show ? 'shadow-md' : ''} gap-5`}
+>	
 	{#if show}
 		<img
 			id="logo"
 			class={`w-11 h-11`}
 			alt="the logo of ios club."
-			src="/global/iOS_Club_LOGO.png"flex-grow
+			src="/global/iOS_Club_LOGO.png"
+			flex-grow
 			use:onload
 		/>
 		<h1 class="text-xl">中南大学苹果实验室</h1>
@@ -44,7 +45,8 @@
 			class={`invisible sm:visible fixed top-0 right-5 w-1/3 max-w-sm h-10 flex justify-end items-center gap-5`}
 		/>
 	{/if}
-	<div class="flex-grow flex justify-end items-center">
-		<Menu items={links} headerClass={show ? 'text-gray-700' : 'text-white'} />
-	</div>
+</div>
+
+<div class="z-50 fixed top-0 w-full h-14 flex flex-row justify-end items-center">
+	<Menu items={links} headerClass={show ? 'text-gray-700' : 'text-white'} />
 </div>
