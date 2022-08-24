@@ -8,7 +8,7 @@
 
 <List>
 	<Card class="flex flex-col md:flex-row md:justify-start items-center">
-		<CardTitleBlock class="w-96 flex-shrink-0 flex flex-col justify-center items-center">
+		<CardTitleBlock class="md:w-96 md:flex-shrink-0 flex flex-col justify-center items-center">
 			<div transition:fade class="flex justify-center items-center">
 				<img
 					src="apply/undraw_check_boxes_re_v40f.svg"
@@ -21,13 +21,13 @@
 				<h1 class="text-3xl truncate">选择你的面试官</h1>
 			</div>
 		</CardTitleBlock>
-		<CardContextBlock>
+		<CardContextBlock >
 			<p>选择适合你的面试官，让我们在面试时更好地与你交流。</p>
 			<p class="font-bold">请复制面试官代号并于填写申请表时填入，或留空由我们为你安排。</p>
 		</CardContextBlock>
 	</Card>
 	<Card class="flex flex-col md:flex-row md:justify-start items-center">
-		<CardTitleBlock class="md:w-96 flex-shrink-0 flex flex-col justify-center items-center">
+		<CardTitleBlock class="md:w-96 md:flex-shrink-0 flex flex-col justify-center items-center">
 			<div transition:fade class="flex justify-center items-center">
 				<img src="apply/undraw_fill_form_re_cwyf.svg" alt="fill in application form" class="w-32 h-32" />
 			</div>
@@ -41,7 +41,7 @@
 		</CardContextBlock>
 	</Card>
 	<Card class="flex flex-col md:flex-row md:justify-start items-center">
-		<CardTitleBlock class="md:w-96 flex-shrink-0 flex flex-col justify-center items-center">
+		<CardTitleBlock class="md:w-96 md:flex-shrink-0 flex flex-col justify-center items-center">
 			<div transition:fade class="flex justify-center items-center">
 				<img src="apply/undraw_phone_call_re_hx6a.svg" alt="keep in touch" class="w-32 h-32" />
 			</div>
