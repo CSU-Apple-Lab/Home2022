@@ -16,12 +16,18 @@
 		{
 			code: 'tangent',
 			avatar: 'apply/interviewer/J.jpg',
-			intros: ['可视化、生物信息学和群智感知']
+			intros: ['我可以和你聊聊可视化、生物信息学和群智感知']
 		},
 		{
-			code: '曦月',
-			avatar: 'apply/interviewer/曦月.png',
+			code: '羲和',
+			avatar: 'apply/interviewer/羲和.png',
 			intros: ['我可以和你聊聊GAN、NLP、树莓派、你的项目和音乐']
+		},
+		{
+			code: 'JX',
+			avatar: 'apply/interviewer/JX.jpg',
+			intros: ['我可以和你聊聊强化学习，HTM和普通大学生的一天']
+
 		}
 	];
 </script>
