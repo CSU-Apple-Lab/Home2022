@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import Interviewer from '@/components/apply/Interviewer.svelte';
 
-	let cards: { code: string; avatar?: string; intros: string[] }[] = [
+	let cards: { code: string; avatar?: string; intros: string[], disable?: boolean }[] = [
 		{
 			code: 'Q',
 			avatar: 'apply/interviewer/Q.jpg',
@@ -28,12 +28,18 @@
 			avatar: 'apply/interviewer/JX.jpg',
 			intros: ['我可以和你聊聊强化学习，HTM和普通大学生的一天']
 
+		},
+		{
+			code: '',
+			avatar: 'apply/interviewer/bar_raiser.png',
+			intros: ['神秘人物，随机出现，BarRaiser'],
+			disable: true
 		}
 	];
 </script>
 
-<div transition:fly class="ml-10 mr-10 flex flex-col items-center gap-10 md:flex-row md:flex-wrap">
+<div transition:fly class="ml-10 mr-10 flex flex-col justify-center items-center gap-10 md:flex-row md:flex-wrap">
 	{#each cards as card}
-		<Interviewer avatar={card.avatar} code={card.code} intros={card.intros} />
+		<Interviewer avatar={card.avatar} code={card.code} intros={card.intros} disableCopy={card.disable}/>
 	{/each}
 </div>

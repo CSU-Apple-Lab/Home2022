@@ -6,6 +6,7 @@
 	export let avatar = 'apply/undraw_profile_pic_ic-5-t.svg';
 	export let intros: string[] = [];
 	export let code: string = '';
+	export let disableCopy: boolean = false;
 </script>
 
 <div
@@ -16,11 +17,15 @@
 		<img class="w-32 h-32 rounded-full" src={avatar} alt="avatar" />
 	</CardTitleBlock>
 	<CardContextBlock class="flex flex-col items-center">
+		{#if !disableCopy}
 		<h1 class="font-bold">关于我</h1>
+		{/if}
 		{#each intros as intro}
 			<p>{intro}</p>
 		{/each}
 	</CardContextBlock>
+	{#if !disableCopy}
 	<h1 class="font-bold">代号</h1>
-	<CopyArea str={code} />
+		<CopyArea str={code} />
+	{/if}
 </div>
