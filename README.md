@@ -38,9 +38,9 @@ SvelteKit has supported hot-reload out of the box, if it doesn't work, check the
 
 # Todo
 
-1. - [ ] Main page
-2. - [ ] Members list
-3. - [ ] Recruit page
+1. - [x] Main page
+2. - [x] Members list
+3. - [x] Recruit page
 
 # Team
 
