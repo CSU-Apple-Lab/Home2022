@@ -6,6 +6,7 @@
 	import CardTitleBlock from '@/components/card/CardTitleBlock.svelte';
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
 	import List from '@/components/card/List.svelte';
+	import IconLink from '@/components/IconLink.svelte';
 
 	onMount(() => {
 		showLoading.set(false);
@@ -16,11 +17,7 @@
 	<Card class="flex flex-col md:flex-row md:justify-between items-center">
 		<CardTitleBlock>
 			<div transition:fade class="flex justify-center items-center">
-				<img
-					src="index/undraw_conversation_re_c26v.svg"
-					alt="Think different"
-					class="w-32 h-32"
-				/>
+				<img src="index/undraw_conversation_re_c26v.svg" alt="Think different" class="w-32 h-32" />
 			</div>
 			<div class="p-5 flex flex-col justify-center items-start">
 				<h1 class="font-bold text-5xl">Think different</h1>
@@ -61,10 +58,15 @@
 			<p>
 				我们联络优秀的业界前辈举行techtalk，为同学们答疑解惑、指点迷津；成员们也在各项活动与学术学习中大放异彩。
 			</p>
-			<p>
-				欢迎到我们的<a class="font-bold" href="https://blog.csdn.net/cyl_csdn_1">博客</a
-				>了解我们的最新成果。
-			</p>
+			<p>欢迎到我们各平台的账号了解我们的最新成果。</p>
+			<ul class="flex justify-center items-center gap-5">
+				<li>
+					<IconLink imgUrl="./global/csdn.png" href={"https://blog.csdn.net/cyl_csdn_1"}/>
+				</li>
+				<li>
+					<IconLink imgUrl="./global/github.png" href="https://github.com/CSU-Apple-Lab"/>
+				</li>
+			</ul>
 		</CardContextBlock>
 	</Card>
 	<Card class="flex flex-col md:flex-row md:justify-between items-center">

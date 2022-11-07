@@ -15,11 +15,14 @@
 	{#await preloadImg(imgSrc) then _}
 		<img src={imgSrc} id="logo" class={`w-48 h-48`} alt="the logo of ios club." />
 	{/await}
-	<h1 class="text-4xl sm:text-5xl text-white font-bold">Think different.</h1>
-	<!-- <PlayIcon
+	<section class="flex flex-col justify-center items-center gap-3">
+		<h1 class="text-4xl sm:text-5xl text-white font-bold">Think different.</h1>
+		<h2 class="text-xl text-white font-bold">中南大学苹果实验室</h2>
+	</section>
+	<PlayIcon
 			on:click
 			class="cursor-pointer sm:absolute sm:bottom-5 sm:right-5 w-10 h-10 hover:w-14 hover:h-14 transition-all duration-300 text-white"
-	/> -->
+	/>
 </div>
 <!-- blank to prevent content being hidden by navigator-->
 <div class="h-14" />

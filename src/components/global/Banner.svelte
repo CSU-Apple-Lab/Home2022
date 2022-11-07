@@ -19,7 +19,6 @@
 	} from '@/global/banner';
 	import { onMount } from 'svelte';
 	import _ from 'lodash';
-	import Menu from '../menu/Menu.svelte';
 	import { preloadImg } from '@/utils/dom.helper';
 
 	let page: Page;
@@ -126,7 +125,7 @@
 </script>
 
 {#if displayVideo || display}
-	<div
+	<header
 		transition:fly
 		id="banner"
 		class={`flex justify-center items-center sm:block w-full ${
@@ -184,7 +183,7 @@
 				{/await}
 			</div>
 		{/if}
-	</div>
+	</header>
 
 	{#if display && !displayVideo}
 		<Logo on:click={clickPlay} />
