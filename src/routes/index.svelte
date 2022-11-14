@@ -7,6 +7,7 @@
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
 	import List from '@/components/card/List.svelte';
 	import IconLink from '@/components/IconLink.svelte';
+	import Chart from '@/components/home/Chart.svelte';
 	//import { i18n } from "@/utils/i18n";
 
 	onMount(() => {
@@ -43,11 +44,10 @@
 	<Card class="flex flex-col md:flex-row-reverse md:justify-between items-center">
 		<CardTitleBlock>
 			<div class="p-5">
-				<h1 class="text-4xl">在iOSClub，</h1>
 				<h1 class="font-bold text-5xl truncate">做你想做的</h1>
 			</div>
 			<div transition:fade class="flex justify-center items-center">
-				<canvas id="myChart" width="400" height="400" />
+				<Chart/>
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>

@@ -28,7 +28,7 @@
 
 <nav
 	transition:fade
-	class={`z-40 top-0 w-full pt-1 pb-1 pl-3
+	class={`z-40 top-0 w-full pt-1 pb-1 pl-3 
 				transition-all duration-300
 			 	flex fixed h-14 my-backdrop-blur items-center ${show ? 'shadow-md' : ''} gap-5`}
 >

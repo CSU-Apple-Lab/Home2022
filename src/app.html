@@ -15,36 +15,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-
-	function initChart() {
-		const ctx = document.getElementById('myChart').getContext('2d');
-
-		const data = {
-			labels: [
-				'省级以上竞赛奖励',
-				'校级以上奖学金',
-				'省级以上大创立项',
-			],
-			datasets: [{
-				label: '20级累计成果',
-				data: [17, 5, 6],
-				fill: true,
-				backgroundColor: [
-					'rgb(255, 99, 132)',
-					'rgb(54, 162, 235)',
-					'rgb(255, 205, 86)'
-				]
-			}]
-		};
-
-		const config = {
-			type: 'doughnut',
-			data: data,
-		};
-		const myChart = new Chart(ctx, config);
-	}
-
-	initChart();
 </script>
 
 </html>

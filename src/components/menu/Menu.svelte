@@ -28,7 +28,7 @@
 </Popover>
 
 <div
-	class={`invisible sm:visible fixed top-0 w-screen h-14 flex justify-end items-center gap-5 pr-5 font-bold ${headerClass}`}
+	class={`invisible sm:visible fixed top-0 w-screen h-14 flex justify-end items-center gap-5 pr-10 font-bold ${headerClass}`}
 >
 	{#each items as item}
 		<a href={item.href}>{item.tag}</a>
