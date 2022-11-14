@@ -7,7 +7,7 @@
 	export let headerClass = '';
 </script>
 
-<Popover class="sm:hidden" let:open let:close>
+<Popover class="ml-auto sm:hidden" let:open let:close>
 	<PopoverButton class={headerClass} style="outline:none">
 		{#if open}
 			<XIcon class="w-10 h-10" />

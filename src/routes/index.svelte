@@ -7,6 +7,7 @@
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
 	import List from '@/components/card/List.svelte';
 	import IconLink from '@/components/IconLink.svelte';
+	//import { i18n } from "@/utils/i18n";
 
 	onMount(() => {
 		showLoading.set(false);
@@ -21,7 +22,7 @@
 			</div>
 			<div class="p-5 flex flex-col justify-center items-start">
 				<h1 class="font-bold text-5xl">Think different</h1>
-				<h1 class="text-3xl truncate">是我们的宗旨与slogan</h1>
+				<h1 class="text-3xl truncate"></h1>
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>
@@ -41,16 +42,12 @@
 	</Card>
 	<Card class="flex flex-col md:flex-row-reverse md:justify-between items-center">
 		<CardTitleBlock>
-			<div transition:fade class="flex justify-center items-center">
-				<img
-					src="index/undraw_happy_feeling_re_e76r.svg"
-					alt="Do what you want"
-					class="w-32 h-32"
-				/>
-			</div>
 			<div class="p-5">
 				<h1 class="text-4xl">在iOSClub，</h1>
 				<h1 class="font-bold text-5xl truncate">做你想做的</h1>
+			</div>
+			<div transition:fade class="flex justify-center items-center">
+				<canvas id="myChart" width="400" height="400" />
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>
@@ -61,10 +58,10 @@
 			<p>欢迎到我们各平台的账号了解我们的最新成果。</p>
 			<ul class="flex justify-center items-center gap-5">
 				<li>
-					<IconLink imgUrl="./global/csdn.png" href={"https://blog.csdn.net/cyl_csdn_1"}/>
+					<IconLink imgUrl="./global/csdn.png" href={'https://blog.csdn.net/cyl_csdn_1'} />
 				</li>
 				<li>
-					<IconLink imgUrl="./global/github.png" href="https://github.com/CSU-Apple-Lab"/>
+					<IconLink imgUrl="./global/github.png" href="https://github.com/CSU-Apple-Lab" />
 				</li>
 			</ul>
 		</CardContextBlock>
