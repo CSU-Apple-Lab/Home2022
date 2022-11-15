@@ -3,17 +3,25 @@
 	import { createEventDispatcher } from 'svelte';
 	import Menu from '../menu/Menu.svelte';
 	import { showNavigator } from '@/global/navigator';
+	import { _, locale } from 'svelte-i18n';
 
 	let show = false;
 	showNavigator.subscribe((val) => (show = val));
 
 	const dispatch = createEventDispatcher();
 
+	let currentLocale;
+
+	locale.subscribe((val) => (currentLocale = val));
+
 	const links = [
-		{ href: '/', tag: '首页' },
-		{ href: '/contactUs', tag: '联系我们' },
-		{ href: '/contactUs', tag: '与我们合作'},
-		{ href: '/joinUs', tag: '加入我们' }
+		currentLocale !== 'en'
+			? { cb: ()=>window.location.search = 'lang=en', tag: 'English' }
+			: { cb: ()=>window.location.search = 'lang=zh-cn', tag: '中文' },
+		{ href: '/', tag: $_('home') },
+		{ href: '/contactUs', tag: $_('contact us') },
+		{ href: '/contactUs', tag: $_('work with us') },
+		{ href: '/joinUs', tag: $_('join us') }
 	];
 
 	function onload(el: HTMLImageElement) {
@@ -38,10 +46,9 @@
 			class={`w-11 h-11`}
 			alt="the logo of ios club."
 			src="/global/iOS_Club_LOGO.png"
-			flex-grow
 			use:onload
 		/>
-		<h1 class="text-xl">中南大学苹果实验室</h1>
+		<h1 class="text-xl">{$_("csu ios club")}</h1>
 		<div
 			class={`invisible sm:visible fixed top-0 right-5 w-1/3 max-w-sm h-10 flex justify-end items-center gap-5`}
 		/>

@@ -12,6 +12,18 @@
 	import { BannerStatus, currentStatus } from '@/global/banner';
 	import { showLoading } from '@/global/loading';
 	import { navigating } from '$app/stores';
+	import { addMessages, init, getLocaleFromQueryString } from "svelte-i18n";
+
+	import zhCn from "@/locale/zh_cn.json";
+	import en from "@/locale/en.json";
+
+	addMessages('zh-cn',zhCn);
+	addMessages('en',en);
+
+	init({
+		fallbackLocale: 'zh-cn',
+		initialLocale: getLocaleFromQueryString('lang'),
+	})
 
 	let bannerStatus: BannerStatus | null = null;
 

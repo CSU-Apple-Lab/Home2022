@@ -33,7 +33,7 @@
 	}
 
     onMount(initChart);
-    //onDestroy(()=>myChart && myChart.destroy())
+    onDestroy(()=>myChart && myChart.destroy())
 </script>
 
 <div transition:fade class="flex justify-center items-center">

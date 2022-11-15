@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { PlayIcon } from '@rgossiaux/svelte-heroicons/solid';
 	import { preloadImg } from '@/utils/dom.helper';
+	import { _ } from "svelte-i18n";
 
 	const imgSrc = '/global/iOS_Club_LOGO.png';
 </script>
@@ -17,7 +18,7 @@
 	{/await}
 	<section class="flex flex-col justify-center items-center gap-3">
 		<h1 class="text-4xl sm:text-5xl text-white font-bold">Think different.</h1>
-		<h2 class="text-xl text-white font-bold">中南大学苹果实验室</h2>
+		<h2 class="text-xl text-white font-bold">{$_('csu ios club')}</h2>
 	</section>
 	<PlayIcon
 			on:click

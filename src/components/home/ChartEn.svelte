@@ -5,7 +5,7 @@
     let myChart = null;
 
 	function initChart() {
-		const ctx = document.getElementById('myChart').getContext('2d');
+		const ctx = document.getElementById('myChart-en').getContext('2d');
 
 		const data = {
 			labels: [
@@ -33,9 +33,9 @@
 	}
 
     onMount(initChart);
-    //onDestroy(()=>myChart && myChart.destroy())
+    onDestroy(()=>myChart && myChart.destroy())
 </script>
 
 <div transition:fade class="flex justify-center items-center">
-	<canvas id="myChart" width="400" height="400" />
+	<canvas id="myChart-en" width="400" height="400" />
 </div>
