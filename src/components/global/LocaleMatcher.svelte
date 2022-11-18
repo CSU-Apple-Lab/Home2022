@@ -5,7 +5,6 @@
 	let currentLang: string | null | undefined = null;
 	locale.subscribe((val) => {
 		currentLang = val;
-		console.log(currentLang, locale);
 	});
 </script>
 
