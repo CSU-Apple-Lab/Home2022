@@ -18,10 +18,10 @@
 	</CardTitleBlock>
 	<CardContextBlock class="flex flex-col items-center">
 		{#if !disableCopy}
-		<h1 class="font-bold">关于我</h1>
+		<h1 class="font-bold mb-2">关于我</h1>
 		{/if}
 		{#each intros as intro}
-			<p>{intro}</p>
+			<p class = "w-62 h-10 mb-4">{intro}</p>
 		{/each}
 	</CardContextBlock>
 	{#if !disableCopy}
