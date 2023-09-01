@@ -34,7 +34,10 @@
 		)();
 		copied = true;
 		console.log(
-			'UR quite good at this .Oops, there are some words on my head.'
+			' ------------------------------------------- \
+			\n \n \
+			UR quite good at this .Oops, there are some words on my head \
+			\n \n 	'
 		);
 		
 	}
