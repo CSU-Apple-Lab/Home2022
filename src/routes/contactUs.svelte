@@ -19,7 +19,7 @@
 			</div>
 			<div>
 				<p>学生负责人微信:</p>
-				<p>RiceBallPaPa</p>
+				<p>l15986059328</p>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@
 			</div>
 			<div>
 				<p>学生负责人微信:</p>
-				<p>RiceBallPaPa</p>
+				<p>l15986059328</p>
 			</div>
 		</div>
 	</div>

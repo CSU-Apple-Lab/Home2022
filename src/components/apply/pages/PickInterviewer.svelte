@@ -2,44 +2,44 @@
 	import { fly } from 'svelte/transition';
 	import Interviewer from '@/components/apply/Interviewer.svelte';
 
-	let cards: { code: string; avatar?: string; intros: string[], disable?: boolean }[] = [
+	let cards: { code: string; avatar?: string; intros: string[], Signal?: boolean }[] = [
 		{
-			code: 'Q',
-			avatar: 'apply/interviewer/Q.jpg',
-			intros: ['我可以和你聊聊前端，开源与漫画']
+			code: 'EEE',
+			avatar: 'apply/interviewer/EEE.png',
+			intros: ['我可以和你聊聊前端，开源和FPS']//DONE
 		},
 		{
-			code: 'Ghost',
-			avatar: 'apply/interviewer/Ghost.jpg',
-			intros: ['我们可以交流一下高中竞赛、nlp和lol']
+			code: 'Forrest',
+			avatar: 'apply/interviewer/Forrest.png',
+			intros: ['我们可以交流一下后端，嵌入式和羽毛球']//DONE
 		},
 		{
-			code: 'tangent',
-			avatar: 'apply/interviewer/J.jpg',
-			intros: ['我可以和你聊聊可视化、生物信息学和群智感知']
+			code: 'Naux',
+			avatar: 'apply/interviewer/Naux.png',
+			intros: ['我可以和你聊聊游戏开发，交互设计和干饭']//DONE
 		},
 		{
-			code: '羲和',
-			avatar: 'apply/interviewer/羲和.png',
-			intros: ['我可以和你聊聊GAN、NLP、树莓派、你的项目和音乐']
+			code: 'Grant',
+			avatar: 'apply/interviewer/Grant.png',//todo
+			intros: ['我可以和你聊聊可视化，数模建模和摇滚']
 		},
 		{
-			code: 'JX',
-			avatar: 'apply/interviewer/JX.jpg',
-			intros: ['我可以和你聊聊强化学习，HTM和普通大学生的一天']
+			code: 'indexss',
+			avatar: 'apply/interviewer/indexss.png',
+			intros: ['我可以和你聊聊AI，深度学习，留学和电子产品']//DONE
 
 		},
 		{
-			code: '',
+			code: 'BarRaiser',
 			avatar: 'apply/interviewer/bar_raiser.png',
-			intros: ['神秘人物，随机出现，BarRaiser'],
-			disable: true
+			intros: ['Catch Me If You Can'],
+			Signal: true
 		}
 	];
 </script>
 
 <div transition:fly class="ml-10 mr-10 flex flex-col justify-center items-center gap-10 md:flex-row md:flex-wrap">
 	{#each cards as card}
-		<Interviewer avatar={card.avatar} code={card.code} intros={card.intros} disableCopy={card.disable}/>
+		<Interviewer avatar={card.avatar} code={card.code} intros={card.intros} SignalCopy={card.Signal}/>
 	{/each}
 </div>
