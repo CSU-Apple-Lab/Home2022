@@ -30,7 +30,7 @@
 <div
 	class={`invisible sm:visible fixed top-0 w-screen h-14 flex justify-end items-center gap-5 pr-5 font-bold ${headerClass}`}
 >
-	{#each items as item}
-		<a href={item.href}>{item.tag}</a>
-	{/each}
+{#each items as item, i}
+	<a class={i === items.length - 1 ? 'mr-5' : ''} href={item.href}>{item.tag}</a>
+{/each}
 </div>

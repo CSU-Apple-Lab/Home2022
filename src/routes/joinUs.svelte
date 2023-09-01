@@ -38,11 +38,11 @@
 			>
 				<CardTitleBlock>
 					<div class="flex flex-col lg:flex-row justify-center items-center gap-5">
-						<h1 class="text-3xl truncate">iOSClub 21届招新</h1>
+						<h1 class="text-3xl truncate">iOSClub 22届招新</h1>
 					</div>
 				</CardTitleBlock>
 				<CardContextBlock>
-					<a href="/apply21">
+					<a href="/apply22">
 						<button class="z-10 bg-blue-500 w-32 h-10 rounded-3xl text-white"> 申请 </button>
 					</a>
 				</CardContextBlock>
