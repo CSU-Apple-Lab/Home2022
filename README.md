@@ -36,14 +36,15 @@ SvelteKit has supported hot-reload out of the box, if it doesn't work, check the
 1. you are not running inside WSL (it causes some problems)
 2. the format of your `.svelte` is correct (like `<p/>` will causes hot-reload not working).
 
-# Todo
-
-1. - [x] Main page
-2. - [x] Members list
-3. - [x] Recruit page
-
 # Team
 
 | name     | email                 |
 | -------- | --------------------- |
-| Rick Lin | 8208200137@csu.edu.cn |
+| Rick Lin (99%)| 8208200137@csu.edu.cn |
+| YELine (01%)| |
+
+### P.S
+- 谦哥的代码实在是太优雅了
+- 很抱歉去破坏了你的代码
+- 感谢你所做的一切
+- UR MY & THE STAR
