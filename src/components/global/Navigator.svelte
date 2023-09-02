@@ -38,7 +38,6 @@
 			class={`w-11 h-11`}
 			alt="the logo of ios club."
 			src="/global/iOS_Club_LOGO.png"
-			flex-grow
 			use:onload
 		/>
 		<h1 class="text-xl">中南大学苹果实验室</h1>

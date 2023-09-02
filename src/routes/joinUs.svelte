@@ -38,11 +38,11 @@
 			>
 				<CardTitleBlock>
 					<div class="flex flex-col lg:flex-row justify-center items-center gap-5">
-						<h1 class="text-3xl truncate">iOSClub 21届招新</h1>
+						<h1 class="text-3xl truncate">iOSClub 22届招新</h1>
 					</div>
 				</CardTitleBlock>
 				<CardContextBlock>
-					<a href="/apply21">
+					<a href="/apply22">
 						<button class="z-10 bg-blue-500 w-32 h-10 rounded-3xl text-white"> 申请 </button>
 					</a>
 				</CardContextBlock>
@@ -53,19 +53,21 @@
 				/>
 			</div>
 			<CardContextBlock>
-				<h1 class="font-bold">我们在找的你</h1>
+				<h1 class="font-bold">我们在找的你🤝</h1>
 				<ul>
-					<li>1. 是中南大学21级的同学</li>
+					<li>1. 是中南大学22级的同学</li>
 					<li>2. 对技术有着一定热情</li>
 					<li>3. 觉得自己的想法十分独特, 愿意将想法付诸行动</li>
 					<li>4. 想认识其他同样独特的人</li>
+					<li>5. 不断的开拓属于自己的领域</li>
 				</ul>
-				<h1 class="font-bold">你将会得到</h1>
+				<h1 class="font-bold">你将会得到👀</h1>
 				<ul class="">
 					<li>1. 我们的合作资源</li>
 					<li>2. 属于苹果实验室的硬件资源 （实验室空间与设备）</li>
 					<li>3. 一群热心且各有所长的学长姐</li>
 					<li>4. 和你一起颠覆世界的队友</li>
+					<li>5. 一个全新的世界</li>
 				</ul>
 			</CardContextBlock>
 		</Card>
