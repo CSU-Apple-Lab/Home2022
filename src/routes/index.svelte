@@ -1,17 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { showLoading } from '@/global/loading';
 	import Card from '@/components/card/Card.svelte';
 	import CardTitleBlock from '@/components/card/CardTitleBlock.svelte';
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
 	import List from '@/components/card/List.svelte';
 	import IconLink from '@/components/IconLink.svelte';
-	//import { i18n } from "@/utils/i18n";
-
-	onMount(() => {
-		showLoading.set(false);
-	});
 </script>
 
 <List>
@@ -22,7 +15,6 @@
 			</div>
 			<div class="p-5 flex flex-col justify-center items-start">
 				<h1 class="font-bold text-5xl">Think different</h1>
-				<h1 class="text-3xl truncate"></h1>
 			</div>
 		</CardTitleBlock>
 		<CardContextBlock>

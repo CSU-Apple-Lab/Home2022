@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { showLoading } from '@/global/loading';
 	import Tab from '@/components/apply/TabBar.svelte';
 	import PickInterviewer from '@/components/apply/pages/PickInterviewer.svelte';
 	import Guide from '@/components/apply/pages/Guide.svelte';
@@ -14,10 +13,6 @@
 	import { afterUpdate } from 'svelte';
 
 	let showGoBack = false;
-
-	onMount(() => {
-		showLoading.set(false);
-	});
 
 	type section = { tag: string; current: boolean; done: boolean };
 

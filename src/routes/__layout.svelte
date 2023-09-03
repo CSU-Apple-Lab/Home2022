@@ -1,8 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount, afterUpdate } from 'svelte';
-	import GlobalLoading from '@/components/global/GlobalLoading.svelte';
-	import GlobalProgressBar from '@/components/global/GlobalProgressBar.svelte';
 	import Navigator from '@/components/global/Navigator.svelte';
 	import Banner from '@/components/global/Banner.svelte';
 	import { useSelectHTMLElementById } from '@/utils/dom.helper';
@@ -10,8 +8,6 @@
 	import { compose } from 'ramda';
 	import { showNavigator } from '@/global/navigator';
 	import { BannerStatus, currentStatus } from '@/global/banner';
-	import { showLoading } from '@/global/loading';
-	import { navigating } from '$app/stores';
 
 	let bannerStatus: BannerStatus | null = null;
 
@@ -48,18 +44,8 @@
 			showNavigator.set(false);
 		}
 	});
-
-	navigating.subscribe((nav)=>{
-		if ( nav === null ) {
-			showLoading.set(false);
-			return;
-		}
-		showLoading.set(true);
-	})
 </script>
 
 <Banner />
 <Navigator />
 <slot />
-<GlobalLoading />
-<GlobalProgressBar />

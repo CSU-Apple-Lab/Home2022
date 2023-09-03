@@ -7,9 +7,7 @@
 	import Logo from '@/components/Logo.svelte';
 	import Controller from '@/components/video/Controller.svelte';
 	import * as h from '@/utils/helper';
-	import { loadingProgress, showLoading } from '@/global/loading';
 	import Loading from '@/components/Loading.svelte';
-	import { progressBarProgress, showProgressBar } from '@/global/progress';
 	import {
 		currentEvent,
 		currentStatus,
@@ -28,12 +26,6 @@
 	let minimized = false;
 	let displayVideo = false;
 	let display = false;
-
-	const links = [
-		{ href: '/', tag: '首页' },
-		{ href: '/contactUs', tag: '联系我们' },
-		{ href: '/joinUs', tag: '加入我们' }
-	];
 
 	_page.subscribe((val) => {
 		currentEvent.set({ type: 'P', page: { to: val.url.pathname } });
@@ -84,27 +76,13 @@
 	}
 
 	function addAllEvent(el: HTMLMediaElement) {
-		el.addEventListener('loadstart', () => showLoading.set(true));
-		el.addEventListener('progress', () => {
-			const idx = el.buffered.length - 1;
-			let bufEnd;
-			try {
-				bufEnd = el.buffered.end(idx > 0 ? idx : 0);
-			} catch (err) {
-				bufEnd = 0;
-			}
-			loadingProgress.set(bufEnd / (el.duration || 100));
-		});
 		el.addEventListener('durationchange', () => (fullTime = el.duration));
 		el.addEventListener('play', () => {
 			isPaused = false;
 			showTipsOnce();
-			showLoading.set(false);
 		});
 		el.addEventListener('pause', () => (isPaused = true));
-		el.addEventListener('timeupdate', () => progressBarProgress.set(el.currentTime / fullTime));
 		el.addEventListener('ended', () => {
-			showProgressBar.set(false);
 			currentEvent.set({
 				type: 'C',
 				control: { displayVideo: false },
@@ -197,7 +175,6 @@
 					control: { close: true },
 					page: { from: page.url.pathname }
 				});
-				showLoading.set(false);
 			}}
 			on:play={play}
 			on:pause={pause}

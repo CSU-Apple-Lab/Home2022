@@ -1,11 +1,3 @@
-<script>
-	import { onMount } from 'svelte';
-	import { showLoading } from '@/global/loading';
-	onMount(() => {
-		showLoading.set(false);
-	});
-</script>
-
 <div class="mt-10 p-20 flex flex-col justify-center items-center">
 	<div class="hidden sm:block poster">
 		<div class="picture w-96 h-96">

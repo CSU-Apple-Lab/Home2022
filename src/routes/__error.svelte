@@ -1,14 +1,8 @@
 <script>
-	import { onMount } from 'svelte';
-	import { showLoading } from '@/global/loading';
 	import List from '@/components/card/List.svelte';
 	import Card from '@/components/card/Card.svelte';
 	import CardTitleBlock from '@/components/card/CardTitleBlock.svelte';
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
-
-	onMount(() => {
-		showLoading.set(false);
-	});
 
 	let slogans = ['Think different.', 'Less is more.', 'Life is random. '];
 </script>
