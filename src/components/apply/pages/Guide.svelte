@@ -4,16 +4,17 @@
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
 	import CardTitleBlock from '@/components/card/CardTitleBlock.svelte';
 	import List from '@/components/card/List.svelte';
+	import Img from '@/components/img/Img.svelte';
 </script>
 
 <List>
 	<Card class="flex flex-col md:flex-row md:justify-start items-center">
 		<CardTitleBlock class="md:w-96 md:flex-shrink-0 flex flex-col justify-center items-center">
 			<div transition:fade class="flex justify-center items-center">
-				<img
+				<Img
 					src="apply/undraw_check_boxes_re_v40f.svg"
 					alt="choose your interviewer"
-					class="w-32 h-32"
+					clazz="w-32 h-32"
 				/>
 			</div>
 			<div class="p-5">
@@ -29,7 +30,7 @@
 	<Card class="flex flex-col md:flex-row md:justify-start items-center">
 		<CardTitleBlock class="md:w-96 md:flex-shrink-0 flex flex-col justify-center items-center">
 			<div transition:fade class="flex justify-center items-center">
-				<img src="apply/undraw_fill_form_re_cwyf.svg" alt="fill in application form" class="w-32 h-32" />
+				<Img src="apply/undraw_fill_form_re_cwyf.svg" alt="fill in application form" class="w-32 h-32" />
 			</div>
 			<div class="p-5">
 				<h1 class="font-bold text-5xl">Step.2</h1>
@@ -43,7 +44,7 @@
 	<Card class="flex flex-col md:flex-row md:justify-start items-center">
 		<CardTitleBlock class="md:w-96 md:flex-shrink-0 flex flex-col justify-center items-center">
 			<div transition:fade class="flex justify-center items-center">
-				<img src="apply/undraw_phone_call_re_hx6a.svg" alt="keep in touch" class="w-32 h-32" />
+				<Img src="apply/undraw_phone_call_re_hx6a.svg" alt="keep in touch" clazz="w-32 h-32" />
 			</div>
 			<div class="p-5">
 				<h1 class="font-bold text-5xl">Step.3</h1>

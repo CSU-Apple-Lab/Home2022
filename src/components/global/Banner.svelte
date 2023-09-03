@@ -18,6 +18,7 @@
 	import { onMount } from 'svelte';
 	import _ from 'lodash';
 	import { preloadImg } from '@/utils/dom.helper';
+	import Img from '../img/Img.svelte';
 
 	let page: Page;
 	let status: BannerStatus = statusChange(null, null);
@@ -143,22 +144,12 @@
 		{/if}
 		{#if display && !displayVideo}
 			<div class="w-full h-screen flex justify-center items-center bg-black opacity-40">
-				{#await preloadImg(src)}
-					<img
-						in:fly
-						src="component/Banner/think_different_alt.png"
-						class="object-cover h-full sm:w-full"
-						alt="1997 apple think different ad."
-					/>
-				{:then}
-					<img
+					<Img
 						{src}
-						in:fly
 						id="bg_img"
-						class="object-cover h-full sm:w-full"
+						clazz="object-cover h-full sm:w-full"
 						alt="1997 apple think different ad."
 					/>
-				{/await}
 			</div>
 		{/if}
 	</header>

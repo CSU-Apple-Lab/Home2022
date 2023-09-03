@@ -1,7 +1,12 @@
+<script>
+
+	import Img from "@/components/img/Img.svelte";
+
+</script>
 <div class="mt-10 p-20 flex flex-col justify-center items-center">
 	<div class="hidden sm:block poster">
 		<div class="picture w-96 h-96">
-			<img src="./contactUs/undraw_contact_us_re_4qqt.svg" alt="contact us" />
+			<Img src="contactUs/undraw_contact_us_re_4qqt.svg" alt="contact us" />
 		</div>
 		<h1 class="title top-10 right-0 text-7xl md:top-10 md:right-0">联系我们</h1>
 		<div class="content flex flex-col top-32 text-xl gap-5">
@@ -16,7 +21,7 @@
 		</div>
 	</div>
 	<div class="flex flex-col justify-center items-start gap-5 sm:hidden">
-		<img src="./contactUs/undraw_contact_us_re_4qqt.svg" alt="contact us" />
+		<Img src="contactUs/undraw_contact_us_re_4qqt.svg" alt="contact us" />
 		<h1 class="text-5xl">联系我们</h1>
 		<div class="content flex flex-col top-32 text-xl gap-5">
 			<div>

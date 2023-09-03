@@ -3,12 +3,13 @@
 	import Card from '@/components/card/Card.svelte';
 	import CardTitleBlock from '@/components/card/CardTitleBlock.svelte';
 	import CardContextBlock from '@/components/card/CardContextBlock.svelte';
+	import Img from '@/components/img/Img.svelte';
 </script>
 
 <List class="p-10 flex flex-col justify-center items-center">
 	<Card class="md:hidden p-10 flex flex-col lg:flex-row lg:justify-start items-center">
 		<CardTitleBlock>
-			<img class="w-52 h-52" src="joinUs/undraw_interview_re_e5jn.svg" alt="Join us" />
+			<Img clazz="w-52 h-52" src="joinUs/undraw_interview_re_e5jn.svg" alt="Join us" />
 		</CardTitleBlock>
 		<CardContextBlock>
 			<h1 class="text-5xl font-bold truncate">加入我们</h1>
@@ -16,8 +17,8 @@
 		</CardContextBlock>
 	</Card>
 	<div class="hidden md:block relative w-full max-w-7xl h-full">
-		<img
-			class="z-0 absolute top-0 right-0 w-96 h-96"
+		<Img
+			clazz="z-0 absolute top-0 right-0 w-96 h-96"
 			src="joinUs/undraw_interview_re_e5jn.svg"
 			alt="Join us"
 		/>
@@ -41,8 +42,8 @@
 						<button class="z-10 bg-blue-500 w-32 h-10 rounded-3xl text-white"> 申请 </button>
 					</a>
 				</CardContextBlock>
-				<img
-					class="z-0 absolute -bottom-10 right-5 lg:right-1/3 w-32 h-32"
+				<Img
+					clazz="z-0 absolute -bottom-10 right-5 lg:right-1/3 w-32 h-32"
 					src="joinUs/undraw_join_re_w1lh.svg"
 					alt="Join us."
 				/>
