@@ -4,6 +4,7 @@
 	import CardTitleBlock from '../card/CardTitleBlock.svelte';
 	import CopyArea from './CopyArea.svelte';
 	import SignalArea from './SignalArea.svelte';
+	import Img from '@/components/img/Img.svelte';
 	export let avatar = 'apply/undraw_profile_pic_ic-5-t.svg';
 	export let intros: string[] = [];
 	export let code: string = '';
@@ -16,10 +17,10 @@
 >
 	<CardTitleBlock>
 	{#if !SignalCopy}
-		<img class="w-32 h-32 rounded-full" src={avatar} alt="avatar" />
+		<Img clazz="w-32 h-32 rounded-full" src={avatar} alt="avatar" />
 	{/if}
 	{#if SignalCopy}
-		<img class="w-32 h-32 rounded-full" src={avatar} alt="avatar" id="Catch Me If You Can.What if..." />
+		<Img clazz="w-32 h-32 rounded-full" src={avatar} alt="avatar" id="Catch Me If You Can.What if..." />
 	{/if}
 	</CardTitleBlock>
 	<CardContextBlock class="flex flex-col items-center">

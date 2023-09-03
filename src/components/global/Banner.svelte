@@ -7,9 +7,7 @@
 	import Logo from '@/components/Logo.svelte';
 	import Controller from '@/components/video/Controller.svelte';
 	import * as h from '@/utils/helper';
-	import { loadingProgress, showLoading } from '@/global/loading';
 	import Loading from '@/components/Loading.svelte';
-	import { progressBarProgress, showProgressBar } from '@/global/progress';
 	import {
 		currentEvent,
 		currentStatus,
@@ -20,6 +18,7 @@
 	import { onMount } from 'svelte';
 	import _ from 'lodash';
 	import { preloadImg } from '@/utils/dom.helper';
+	import Img from '../img/Img.svelte';
 
 	let page: Page;
 	let status: BannerStatus = statusChange(null, null);
@@ -28,12 +27,6 @@
 	let minimized = false;
 	let displayVideo = false;
 	let display = false;
-
-	const links = [
-		{ href: '/', tag: '首页' },
-		{ href: '/contactUs', tag: '联系我们' },
-		{ href: '/joinUs', tag: '加入我们' }
-	];
 
 	_page.subscribe((val) => {
 		currentEvent.set({ type: 'P', page: { to: val.url.pathname } });
@@ -84,27 +77,13 @@
 	}
 
 	function addAllEvent(el: HTMLMediaElement) {
-		el.addEventListener('loadstart', () => showLoading.set(true));
-		el.addEventListener('progress', () => {
-			const idx = el.buffered.length - 1;
-			let bufEnd;
-			try {
-				bufEnd = el.buffered.end(idx > 0 ? idx : 0);
-			} catch (err) {
-				bufEnd = 0;
-			}
-			loadingProgress.set(bufEnd / (el.duration || 100));
-		});
 		el.addEventListener('durationchange', () => (fullTime = el.duration));
 		el.addEventListener('play', () => {
 			isPaused = false;
 			showTipsOnce();
-			showLoading.set(false);
 		});
 		el.addEventListener('pause', () => (isPaused = true));
-		el.addEventListener('timeupdate', () => progressBarProgress.set(el.currentTime / fullTime));
 		el.addEventListener('ended', () => {
-			showProgressBar.set(false);
 			currentEvent.set({
 				type: 'C',
 				control: { displayVideo: false },
@@ -165,22 +144,12 @@
 		{/if}
 		{#if display && !displayVideo}
 			<div class="w-full h-screen flex justify-center items-center bg-black opacity-40">
-				{#await preloadImg(src)}
-					<img
-						in:fly
-						src="component/Banner/think_different_alt.png"
-						class="object-cover h-full sm:w-full"
-						alt="1997 apple think different ad."
-					/>
-				{:then}
-					<img
+					<Img
 						{src}
-						in:fly
 						id="bg_img"
-						class="object-cover h-full sm:w-full"
+						clazz="object-cover h-full sm:w-full"
 						alt="1997 apple think different ad."
 					/>
-				{/await}
 			</div>
 		{/if}
 	</header>
@@ -197,7 +166,6 @@
 					control: { close: true },
 					page: { from: page.url.pathname }
 				});
-				showLoading.set(false);
 			}}
 			on:play={play}
 			on:pause={pause}

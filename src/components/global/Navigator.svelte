@@ -3,6 +3,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import Menu from '../menu/Menu.svelte';
 	import { showNavigator } from '@/global/navigator';
+	import Img from '../img/Img.svelte';
 
 	let show = false;
 	showNavigator.subscribe((val) => (show = val));
@@ -15,15 +16,6 @@
 		{ href: '/contactUs', tag: '与我们合作'},
 		{ href: '/joinUs', tag: '加入我们' }
 	];
-
-	function onload(el: HTMLImageElement) {
-		if (el.complete) {
-			dispatch('load');
-		}
-		el.addEventListener('load', () => {
-			dispatch('load');
-		});
-	}
 </script>
 
 <nav
@@ -33,12 +25,11 @@
 			 	flex fixed h-14 my-backdrop-blur items-center ${show ? 'shadow-md' : ''} gap-5`}
 >
 	{#if show}
-		<img
+		<Img
 			id="logo"
-			class={`w-11 h-11`}
+			clazz={`w-11 h-11`}
 			alt="the logo of ios club."
-			src="/global/iOS_Club_LOGO.png"
-			use:onload
+			src="global/iOS_Club_LOGO.png"
 		/>
 		<h1 class="text-xl">中南大学苹果实验室</h1>
 		<div
